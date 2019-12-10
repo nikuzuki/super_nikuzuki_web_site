@@ -1,9 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="manifest.json">
     <title>Super Nikuzuki Web Site</title>
 </head>
 <body>
     <h1>This is Super Nikuzuki Web Site. yeah!</h1>
+<script>
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('service_worker.js').then(function(registration) {
+        console.log('Successsful');
+    }).catch(function(err) {
+        console.log('Failed');
+    });
+}
+</script>
 </body>
 </html>
